@@ -8,10 +8,7 @@ import Projects from "./"
 function App() {
   return (
     <div>
-      <nav />
-      <About />
-      <Shop />
-      <Projects />
+        
     </div>
   );
 }
