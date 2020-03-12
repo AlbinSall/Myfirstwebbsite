@@ -1,19 +1,32 @@
 import React from 'react';
 import './App.css';
 import Nav from "./Nav";
-import About from "./Pages./About"
-import Shop from "./Pages./Shop"
-import Projects from "./"
+import About from "./About";
+import Project from "./Project";
+import Social from "./Social";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <nav />
-      <About />
-      <Shop />
-      <Projects />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/project" component={Project} />
+        <Route path="/social" component={Social} />
+      </Switch>
+      </div>
+    </Router>
   );
 }
+
+
+const Home= () =>(
+  <div>
+    <h1>Home Page</h1>
+  </div>
+)
 
 export default App;
